@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xml:lang="it" lang="it">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Carrello |Green Tech</title>
+        <meta name="description" content="Il tuo carrello , qui puoi visualizzare i prodotti che hai inserito nel carrello"/> <!--FIXME: migliorare description-->
+        <meta name="keywords" content="greentech,inquinamento,ambiente,purificatore,aria,polveri sottili,pm10,pm2.5,carrello,prodotti"/> <!--FIXME: migliorare keywords-->
+        <meta name="author" content="gruppo" /> <!--FIXME:-->
+
+        <!-- link fogli di stile css -->
+        <link rel="stylesheet" href="../style/index.css" />
+        <link rel="stylesheet" href="../style/mini.css" media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)" />
+        <link rel="stylesheet" href="../style/print.css" media="print" />
+        <script src="../js/menu.js"></script>
+        <script src="../js/tornasu.js" defer></script>
+    </head>
+
+    <body  id="carrello">
+        <div id="top_layout">
+            <header>
+                <h1><span lang="en">Green Tech</span></h1>
+                <a href="#main" class="salta_navigazione" title="Salta la navigazione">Salta navigazione</a>
+
+                <nav id="menu_header" aria-label="menu header">
+                    <ul>
+                        <li id="login"><a class="login_link" href="../php/login.php" title="Accedi all'area personale">Area Personale</a></li>
+                        <li><a class="first_link_menu" href="../html/index.html" lang="en">Home</a></li>
+                        <li><a href="../html/azienda.html" title="Visualizza la storia dell'azienda">L'azienda</a></li>
+                        <li><a href="../php/prodotti.php" title="Vai alla pagina dei prodotti">Prodotti</a></li>
+                        <li><a class="last_link_menu" href="../html/contatti.html" title="Vai alla pagina dei contatti">Contatti</a></li>
+                    </ul>
+                </nav>
+
+                <div id="link_carrello"><img src="../Immagini/contenuto/carrello_disable.png" alt="Icona disattivata di un carrello per spostarti all'area di pagamento dei prodotti" /></div>
+                <a id="ham_toggle" href="#menu_footer"><img src="../Immagini/contenuto/ham_toggle.png" alt="tre linee orizzontali di colore nero che rappresentano le voci del menu"/></a>
+            </header>
+
+            <nav id="breadcrumb" aria-label="breadcrumb">
+                <p>Ti trovi in: <a class="breadcrumb_link" href="../html/index.html" lang="en">Home</a> &gt; &gt; Carrello</p>
+            </nav>
+        </div>
+
+        <main id="main">
+
+            <h2>Il tuo Carrello</h2>
+            <form action="../php/carrello.php" method="post" id="acquisto_container" class="general_container">
+                <p>Il totale è : <strong id="inserisciTotale"></strong></p>
+                <input type="submit" name="submit" id="procedi_acquisto_button" value="Procedi con l'acquisto" />
+            </form>
+            <!---->
+                <p id="inserisciProdotti"></p>
+                <p id="nessun_prodotto"></p>
+            <!---->
+            <a class="torna_su" href="#"><img src="../Immagini/contenuto/up-arrow.png" alt="Torna a inizio pagina" width="80" height="80" id="torna_su" class="nascosto" /></a>
+        </main>
+
+        <footer>
+            <img id="logo" src="../Immagini/contenuto/logo.png" alt="logo azienda, nome dell'azienda su una foglia verde" />
+            <div id="footer_head">
+                <img src="../Immagini/contenuto/valid-xhtml10.png" alt="html valido" />
+                <p><span lang="en">Empowering users to create Green Environments.</span></p>
+                <img src="../Immagini/contenuto/vcss-blue.gif" alt="css valido" />
+            </div>
+            <hr />
+            <dl id="footer_description">
+                <dt><span lang="en">WE ARE GREENTECH</span></dt>
+                <dd>Azienda leader nello sviluppo di soluzioni contro l'inquinamento da polveri sottili</dd>
+            </dl>
+            <dl id="footer_contact">
+                <dt>Contatti</dt>
+                <dd>
+                    <dl id="dati_contatto">
+                        <dt>Telefono:</dt>
+                        <dd><a href="tel:+393485628128" title="Numero di telefono">+39 348-562-8128</a></dd>
+                        <dt>Indirizzo:</dt>
+                        <dd><a href="https://www.google.it/maps/place/DIVIMA+RICAMBI/@45.6908672,11.5596381,17z/data=!3m1!4b1!4m6!3m5!1s0x4778cbf9bc39d6d5:0x9d70b5561d5391f2!8m2!3d45.6908672!4d11.5611635!16s%2Fg%2F11f1179gt2" target="_blank" title="Indirizzo della sede">Viale dell'industria, 110 Breganze (VI)</a></dd>
+                        <dt>E-mail:</dt>
+                        <dd><a href="mailto:greentech@gmail.com" title="Email di contatto">greentech@gmail.com</a></dd>
+                    </dl>
+                </dd>
+            </dl>
+            <hr />
+            <nav id="menu_footer" aria-label="footer">
+                <p>Naviga nel sito</p>
+                <ul>
+                    <li><a class="login_link" href="../php/login.php" title="Accedi all'area personale">Area Personale</a></li>
+                    <li><a class="first_link_menu" href="../html/index.html" lang="en" title="Vai alla homepage">Home</a></li>
+                    <li><a href="../html/azienda.html" title="Visualizza la storia dell'azienda">L'azienda</a></li>
+                    <li><a href="../php/prodotti.php" title="Vai alla pagina dei prodotti">Prodotti</a></li>
+                    <li><a href="../html/contatti.html" title="Vai alla pagina dei contatti">Contatti</a></li>
+                    <li id="politiche"><a class="last_link_menu politics_link" href="../html/politiche_spedizione.html"title="Vai alla pagina di politiche di spedizione">Politiche Spedizioni</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+    /* Nascondi elementi non necessari per la stampa */
+    header, nav, link, menu, #footer_head, .torna_su, iframe, .cash_card{
+      display: none;
+    }
+
+    body {
+      font-size: 12pt !important;
+      box-shadow: none !important;
+    }
+
+    /* Imposta il testo in bianco e nero */
+    * {
+      print-color-adjust: exact;
+      color-adjust: exact;
+      font-family:"Times New Roman" ;
+      font-size: 12pt ;
+      box-shadow: none !important;
+      background-color: white !important;
+    }
+    /* Allinea il contenuto al centro della pagina */
+    .container {
+      margin: 0 auto;
+      width: auto;
+    }
+    
+    a{
+      color: blue;
+    }
+    a:visited{
+      color: purple;
+    }
+    caption h3, tr{
+      color: black;
+    }
+    #contact_telefono,#contact_email,#contact_hours,#contact_address{
+      background-image: none;
+      background-size: 0;
+      padding-top: 0;
+    }
+  

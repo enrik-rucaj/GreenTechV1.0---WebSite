@@ -1,0 +1,414 @@
+
+body {
+    border-radius: 0px;
+}
+
+/*
+======================================
+                HEADER
+======================================
+*/
+
+header {
+    padding-top: 1em;
+}
+
+header h1 {
+    margin: 0em 0;
+}
+
+#link_carrello img {
+    width: 3em;
+}
+
+#ham_toggle {
+    display: inline-block;
+}
+
+#ham_toggle img {
+    width: 2.5em;
+}
+
+#ham_toggle:visited {
+    background-color: #058654;              /*compatibilità IE, in zoom in alto*/
+    background-color: var(--bgheadercolor);
+}
+
+#ham_toggle:hover {
+    background-color: #058654;              /*compatibilità IE, in zoom in alto*/
+    background-color: var(--bgheadercolor);
+    border-radius: 0px;
+}
+
+/*
+======================================
+                MENU
+======================================
+*/
+
+#menu_header {
+    display: none;
+}
+
+#menu_footer {
+    padding-top: 6em;
+    padding-bottom: 5em;
+}
+
+#menu_footer ul {
+    max-width: 80%;
+}
+
+#menu_footer a, #menu_footer .current_selected {
+    padding: 1em 0;
+}
+
+#menu_footer a.login_link {
+    background-color: #000;                 /*compatibilità IE in zoom in*/
+    background-color: var(--bglinkcolor);
+}
+
+#menu_footer a.login_link:visited {
+    background-color: #3a1545;              /*compatibilità IE in zoom in*/
+    background-color: var(--bgloginvisitedcolor);
+}
+
+#menu_footer li:first-child {
+    margin-bottom: 0.5em;   /*Nel caso di current_Selected*/
+    border-radius: 25px;
+}
+
+#menu_footer li:first-child a {
+    margin-bottom: 0.5em;
+}
+
+#menu_footer li {   /*elimina il "display: none" dal menu footer */
+    display: inline;
+}
+
+#menu_footer li.current_selected {
+    display: flex;
+}
+
+#menu_footer p {
+    display: block;
+    text-align: center;
+    padding-bottom: 4em;
+    font-weight: bold;
+    color: #091747;                         /*compatibilità IE, in zoom in alto*/
+    color: var(--txttitlefootercolor);
+    font-size: 1.5em;
+}
+
+/*
+======================================
+              CORPO HOME
+======================================
+*/
+
+#home main .general_container {
+    max-width: 95%;
+    padding-top: 1.2em;
+    margin-bottom: 3.5em;
+}
+
+#home main .general_container.title {
+    line-height: 1.2em;
+    max-width: 95%;
+}
+
+#home main .fake_h1 {
+    padding-bottom: 0.5em;
+}
+
+.product_link .fake_link {
+    display: inline-block;
+}
+
+/*
+======================================
+              CORPO AZIENDA
+======================================
+*/
+
+#azienda h2.general_container {
+    max-width: 70%;
+    padding-right: 0em;
+    padding-left: 2.5em;
+}
+
+#azienda p.general_container {
+    max-width: 90%;
+}
+
+/*
+======================================
+             CORPO CONTATTI
+======================================
+*/
+
+#contact_address a {
+    display: block;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+}
+
+#contact_address iframe {
+    display: none;
+}
+
+/*
+======================================
+             CORPO PRODOTTI
+======================================
+*/
+
+#conferma_aggiunta_carrello.popUp {
+    width: 70%;
+    height: 25%;
+}
+
+/*
+======================================
+              CORPO ORDINI
+======================================
+*/
+
+.info_spedizioni, .info_spedizioni div {
+    display: block;
+}
+
+.info_spedizioni div {
+    margin-left: 2em;
+}
+
+.info_spedizioni dt {
+    float: left;
+    text-align: left;
+    font-size: 1em;
+    margin-right: 0.5em;
+}
+
+.info_spedizioni dd {
+    text-align: left;
+} 
+
+.indirizzo_spedizioni {
+    padding: 0;
+    padding-left: 2em;
+    margin-left: 1em;
+}
+
+/*
+======================================
+             CORPO CARRELLO
+======================================
+*/
+
+#carrello .general_container {
+    -ms-grid-columns: 1fr 1fr;                              /*compatibilità IE in zoom in*/
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 2fr minmax(0, 3fr) 1fr;                  /*compatibilità IE in zoom in*/
+    grid-template-rows: 2fr minmax(0, 3fr) 1fr;
+}
+
+#carrello .general_container h3 {
+    -ms-grid-column: 1;
+    grid-column: 1 / span 2;
+}
+
+#carrello .general_container img {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / span 2;
+
+    width: 100%;
+}
+
+#carrello .general_container form {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+
+    align-self: center;
+    padding-bottom: 0em;
+}
+
+#acquisto_container.general_container {
+    width: 80%;
+    padding: 0.5em 0;
+    margin-bottom: 2em;
+}
+
+#carrello p {
+    padding-right: 0.5em;
+    padding-bottom: 1em;
+}
+
+/*
+======================================
+            CORPO PAGAMENTO
+======================================
+*/
+
+#pagamento dl.general_container {
+    max-width: 95%;
+    background: none;
+    background-color: #F3F3F3;
+    background-color: var(--generalcontainercolor);
+    border-radius: 25px;
+    padding: 0.5em;
+}
+
+#pagamento dl.general_container .user, #pagamento dl.general_container .delivery {
+    background-size: contain;
+    padding-left: 2em;
+}
+
+#pagamento .clear_float {
+    margin-left: 3em;
+}
+
+#pagamento dt {
+    margin-right: 1em;
+}
+
+#pagamento dd {
+    margin-left: 0em;
+}
+
+#acquista_submit {
+    margin-top: 1em;
+}
+
+/*
+======================================
+          CORPO AREA RISERVATA
+======================================
+*/
+
+#area_riservata #datiUtente > dl {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+dl.personal_data, dl.shipment_data {
+    background: none;
+    padding-left: 0em;
+}
+
+h3.personal_data {
+    background: url(../Immagini/background/icon/user.png) left no-repeat;
+    background-size: contain;
+    background-position: 15%;
+}
+
+h3.shipment_data {
+    background: url(../Immagini/background/icon/delivery.png) left no-repeat;
+    background-size: 2em;
+}
+
+.personal_data dt, .shipment_data dt {
+    float: none;
+    font-weight: bold;
+}
+
+.personal_data dd, .shipment_data dd {
+    text-align: center;
+    margin-left: 0;
+    padding-bottom: 1em;
+}
+
+/*
+======================================
+        CORPO POLITICHE AZIENDE
+======================================
+*/
+
+#pol_spedizione dd {
+    clear: left;
+    margin-left: 3em;
+}
+
+/*
+======================================
+                FOOTER
+======================================
+*/
+
+#footer_head img {
+    width: 13%;
+    height: 33%;
+}
+
+#dati_contatto {
+    font-size: 0.9em;
+}
+
+#dati_contatto dt {
+    margin-bottom: 1em;
+    clear: left;
+}
+
+#dati_contatto dd {
+    margin-bottom: 1em;
+}
+
+/*
+======================================
+               CASH CARD
+======================================
+*/
+
+.cash_card {
+    font-size: 1em;
+    padding: 20% 40%;
+}
+
+.title_card {
+    top: 9%;
+}
+
+.holder_card {
+    bottom: 15%;
+}
+
+.other_card {
+    max-width: 100%;
+}
+
+/*
+======================================
+                CLASSI
+======================================
+*/
+
+.first_link_menu {
+    border-radius: 20px 20px 0 0;
+}
+
+.last_link_menu {
+    border-radius: 0 0 20px 20px;
+}
+
+.container_category {
+    max-width: 90%;
+}
+
+.product_link {
+    max-width: 90%;
+    padding-top: 0em;
+    box-shadow: 6px 8px 60px gray,
+                15px 8px #058654 inset;      /*compatibilità IE, in zoom in alto*/
+    box-shadow: 6px 8px 60px gray,
+                15px 8px var(--bgheadercolor) inset;
+}
+
+.image_category {
+    height: 15em;
+    border-radius: 15px;
+    border-top-left-radius: 25px;
+}
